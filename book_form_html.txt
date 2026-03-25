@@ -1,0 +1,17 @@
+<label for="name">Name:</label><br>
+                		<input type="text" id="name" name="name"><br><br>
+
+                		<label for="date">Date:</label><br>
+                		<input type="date" id="date" name="date"><br><br>
+
+               			 <label for="time">Time:</label><br>
+                		<input type="time" id="time" name="time"><br><br>
+
+                		<label for="service">Service:</label><br>
+                		<select id="service" name="service">
+                    			<option value="skincare">Skincare</option>
+                    			<option value="therapy">Therapy</option>
+                    			<option value="package">Package</option>
+				</select><br><br>
+
+                		<input type="submit" value="Book Appointment">

@@ -1,0 +1,335 @@
+@charset "utf-8";
+:root {
+	--primary-color: #b4bda8;
+	--accent-color: #8d4325;
+	--contrast-color: #3e4444;
+	--highlight-color: #ebdfc6;
+}
+
+/* Body */
+body {
+	background-color: var(--primary-color);
+	color: var(--contrast-color);
+	font-family: 'Helvetica Neue', sans-serif;
+	margin:0;
+	padding: 0;
+}
+
+/* Header */
+header {
+	background-color: var(--primary-color);
+	color: var(--contrast-color);
+
+}
+
+/* Header Container */
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 40px;
+	background-color: var(--primary-color);
+	gap: 40px;
+}
+
+.branding {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.stacked-title h1 {
+	text-align: left;
+	font-size: 2.5rem;
+	line-height: 1.2;
+	margin: 0;
+}
+
+/* Logo */
+.logo-img{
+	width: 80px;
+	height: auto;
+ 	border: 2px solid var(--accent-color);
+}
+
+/* Site Title*/
+header h1 {
+	font-size: 2rem;
+	margin: 0;
+	font-family: 'Cormorant Garamond', serif;
+	color: var(--contrast-color);
+}
+
+/* Links */
+a {
+	color: var(--contrast-color);
+}
+
+/* Navigation */
+.main-nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	width: 100%; 
+	gap: 35px;
+	margin: 0;
+	padding: 0;
+}
+
+.main-nav ul li {
+	flex: 1;
+}
+
+.main-nav ul li a {
+	display: block;
+	width: 100%;
+	background-color: var(--accent-color);
+	text-align: center;
+	padding: 20px 25px;
+	color: var(--highlight-color);
+	text-decoration: none;
+	font-family: 'Segoe UI', sans-serif;
+	font-weight: normal;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+#current-page {
+	background-color: var(--accent-color);
+	border-radius: 5px;
+	color: var(--highlight-color);
+}
+
+.main-nav {
+	flex-grow: 1;
+}
+
+/* Main */
+
+main {
+	width: 100vw; /* Full viewport width */
+	max-width: none;
+	margin-left: calc(-50vw + 50%);
+	padding: 40px 60px;
+	background-color: var(--highlight-color);
+	color: var(--contrast-color);
+	border-radius: 0;
+	box-shadow: none; /* Optional: remove if you want a seamless edge */
+	box-sizing: border-box;
+}
+
+	margin: 0 auto;    
+	padding: 40px 60px;
+	background-color: var(--highlight-color);
+	color: var(--contrast-color);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(62, 68, 68, 0.1);
+	box-sizing: border-box;
+}
+
+/* Section */
+section {
+	background-color: var(--highlight-color);
+	color: var(--contrast-color);
+	margin-bottom: 20px;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+/* Centered Block */
+.centered-block {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+/* Article */
+article {
+	background-color: var(--highlight-color);
+	color: var(--contrast-color);
+}
+
+/* Footer */
+footer {
+	background-color: var(--primary-color);
+	color: var(--contrast-color);
+	padding: 20px 0;
+	text-align: center;
+	font-size: 0.95rem;
+	border-top: 2px solid var(--accent-color);
+}
+
+footer nav ul{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap:35px;
+	padding:10px 0;
+	margin: 0;
+}
+
+footer nav ul li a {
+	color: var(--contrast-color);
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer nav ul li a:hover{
+	color: var(--accent-color);
+	text-decoration: underline;
+}
+
+/* Other Headers */
+h1, h2, h3 {
+	font-family: 'Segoe UI', sans-serif;
+	color: var(--contrast-color);
+	text-align: center;
+	margin-top: 0.5em;
+}
+
+header h1 {
+	font-size: 3.5rem;
+	margin: 0;
+	padding: 10px 0;
+	text-align: center;
+	width: 100%;
+	font-family: 'Cormorant Garamond', serif;
+	color: var(--contrast-color);
+}
+
+section h2 {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+section p {
+	font-family: 'Segoe UI', sans-serif;
+	text-align: left;
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.centered-header {
+	font-family: 'Segoe UI', sans-serif;
+	text-align: center;
+}
+
+.centered-header + p {
+	font-family: 'Segoe UI', sans-serif;
+	text-align: left;
+ 	max-width: 600px;
+ 	margin: 0 auto;
+}
+
+/* Welcome Box */
+.welcome-box {
+	background-color: rgba(180, 189, 168, 0.3);
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid var(--accent-color);
+	box-shadow: 0 2px 5px rgba(62, 68, 68, 0.2);
+}
+
+/* Hero Section */ 
+.hero {
+	text-align: center;
+	padding: 30px 20px;
+}
+
+.hero img {
+	width: 100vw;
+	height: 300px;
+	object-fit: cover;
+	max-width: none;
+	margin-left: calc(-50vw + 50%);
+	border-radius: 0;
+	display: block;
+}
+
+.hero h2 {
+	font-size: 3rem;  
+	font-weight: 300;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+	color: var(--contrast-color);
+	font-family: 'Segoe UI', sans-serif;
+	text-align: center;
+}
+
+.hero h2::after {
+	content: "";
+	display: block;
+	width: 400px;
+	height: 2px;
+	margin: 12px auto 0;
+	background-color: var(--accent-color);
+	opacity: 0.3;
+}
+
+
+
+/* Features Section */
+.features ul {
+	list-style: none;
+	padding-left: 0px;
+	margin- 0 auto;
+	max-width: 600px;
+	text-align: left;
+}
+
+.features li {
+	margin-bottom: 8px;
+	padding-left: 10px;
+}
+
+/* CTA Buttons */
+.cta-services a,
+.cta-book a {
+	display: inline-block;
+	background-color: var(--accent-color);
+	color: var(--highlight-color);
+	padding: 12px 24px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+	border: 1px solid var(--contrast-color);
+	margin: 10px auto;
+}
+
+.cta-services a:hover,
+.cta-book a:hover {
+	background-color: var(--contrast-color);
+	color: var(--highlight-color);
+}
+
+/* Utility */
+.pg-unselectable {
+	user-select: none;
+	font-style: italic;
+	color: var(--contrast-color);
+}
+
+.centered-block {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center; /* 
+}
+
+.centered-block a {
+	display: inline-block; /*
+}
+
+
+
+
+	
+
+
+
+
+

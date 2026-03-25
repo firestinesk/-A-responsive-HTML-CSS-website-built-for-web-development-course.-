@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="stylesheet.css">
+	<title>Contact | Salt & Sage</title>
+</head>
+
+<body class="secondary-page">
+
+	<!-- Header: Logo and Top Navigation -->
+	<header role="banner">
+		<nav role="navigation">
+			<img src="images/logo.png" alt="Salt & Sage logo" class="logo-img">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="book.html">Book</a></li>
+				<li><a href="contact.html" id="current-page">Contact</a></li>
+			</ul>
+		</nav>
+		<h1>Salt & Sage - Contact</h1>
+	</header>
+
+	<!-- Main Content-->
+	<main class="contact-main" role="main">
+
+		<!-- Contact Form Section-->
+		<section id="contact-form">
+			<h2>Contact Us</h2>
+			<form action="#" method="post">
+				<fieldset>
+					<legend>Send Us a Message</legend>
+
+					<div class="form-row">
+						<label for="full-name">Full Name:</label>
+ 						<input type="text" id="full-name" name="full-name" required minlength="2" maxlength="50">
+					</div>
+					
+					<div class="form-row">
+  						<label for="email">Email:</label>
+ 						<input
+    							type="email"
+    							id="email"
+    							name="email"
+    							required
+    							pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+    							maxlength="50"
+    							placeholder="e.g. name@example.com">
+					</div>
+
+					<div class="form-row">
+  						<label for="phone">Phone Number:</label>
+  						<input
+    							type="tel"
+    							id="phone"
+    							name="phone"
+    							required
+    							pattern="^\\d{3}[-.\\s]?\\d{3}[-.\\s]?\\d{4}$"
+    							title="Enter a valid 10-digit phone number (e.g. 555-555-1234)"
+    							minlength="10"
+    							maxlength="14"
+    							inputmode="numeric"
+    							autocomplete="tel"
+    							placeholder="e.g. 555-555-1234">
+					</div>
+
+					<div class="form-row">
+						<label for="message">Your Message:</label>
+						<textarea id="message" name="message" rows="4" cols="40" maxlength="300" required></textarea>
+					</div>
+
+					<input type="submit" name="submit" value="Submit">
+ 
+				</fieldset>
+			</form>
+		</section>
+
+		<!--Location Image Section-->
+		<section id="location-image">
+			<h2>Our Location</h2>
+			<img src="images/location-contact.jpg" alt="Salt & Sage spa exterior">
+		</section>
+
+		<!-- Address Section -->
+		<section id="address">
+			<div class="address-wrapper">
+				<h2>Address</h2>
+				<p>
+					100 Franklin Ave<br>
+					Asheville, NC 28801<br>
+					Phone: (555) 555-5555
+				</p>
+			</div>
+			
+			<div class="map-container">
+				<iframe
+    					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.123456789!2d-82.555555!3d35.595555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8859f123456789ab%3A0xabcdef123456789!2s100%20Franklin%20Ave%2C%20Asheville%2C%20NC%2028801!5e0!3m2!1sen!2sus!4v1725395799894!5m2!1sen!2sus"
+   					width="100%"
+    					height="400"
+    					style="border:0;"
+    					allowfullscreen=""
+    					loading="lazy"
+    					referrerpolicy="no-referrer-when-downgrade">
+  				</iframe>
+			</div>
+		</section>
+		
+		<section id="contact-options">
+ 			<h2>Ways to Reach Us</h2>
+ 			 <ul>
+   				 <li>Call us during business hours</li>
+  				 <li>Send us an email</li>
+  				 <li>Visit our location in Asheville</li>
+  			</ul>
+		</section>
+
+		<!-- Social Media Links -->
+		<section id="follow">
+			<h2>Follow Us</h2>
+			<ul>
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Instagram</a></li>
+				<li><a href="#">Pinterest</a></li>
+			</ul>
+		</section>
+
+	</main>
+
+	<!-- Footer Section -->
+	<footer role="contentinfo">
+		<!-- Footer Navigation -->
+		<p>
+			<a href="index.html">Home</a> |
+			<a href="about.html">About</a> |
+			<a href="services.html">Services</a> |
+			<a href="book.html">Book</a> |
+			<a href="contact.html">Contact</a>
+		</p>
+
+	</footer>
+	<script>
+	document.querySelector("form").addEventListener("submit", function(event) {
+ 		let form = event.target;
+  		let inputs = form.querySelectorAll("input, select, textarea");
+  		let emptyFields = 0;
+
+  		inputs.forEach(function(input) {
+    			if (input.hasAttribute("required") && !input.value.trim()) {
+      				emptyFields++;
+    			}
+  		});
+
+  		let phoneInput = form.querySelector('input[name="phone"]');
+  		let phonePattern = /^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
+  		let phoneValid = phonePattern.test(phoneInput.value);
+
+  		let emailInput = form.querySelector('input[type="email"]');
+  		let emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  		let emailValid = emailPattern.test(emailInput.value);
+
+  		let errorMessages = [];
+
+  		if (emptyFields > 0) {
+    			errorMessages.push("Please fill all required fields.");
+  		}
+  		if (!phoneValid) {
+   			errorMessages.push("Phone number must be valid.");
+  		}
+  		if (!emailValid) {
+    			errorMessages.push("Email address must be valid.");
+  		}
+
+  		if (errorMessages.length > 0) {
+    			event.preventDefault();
+    			alert(errorMessages.join("\n"));
+  		}
+	
+		if (errorMessages.length === 0) {
+  			event.preventDefault();
+  			alert("Form submitted successfully!");
+		}
+	});
+	</script>
+</body>
+</html>
+
+
